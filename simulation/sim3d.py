@@ -7,8 +7,8 @@ sys.path.append(os.getcwd())
 import sim_data
 from mmd_measure import mmd
 from ..NIM-IWAE import newModel
-import ..trainer
-import ..utils
+from .. import trainer
+from .. import utils
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
 from sklearn.impute import SimpleImputer
