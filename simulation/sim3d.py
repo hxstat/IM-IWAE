@@ -4,9 +4,9 @@ import os
 import sys
 import random
 sys.path.append(os.getcwd())
-from NIM-IWAE import newModel
 import sim_data
 from mmd_measure import mmd
+from ..NIM-IWAE import newModel
 import ..trainer
 import ..utils
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
