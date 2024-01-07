@@ -1,4 +1,3 @@
-#import tensorflow as tf
 import tensorflow.compat.v1 as tf
 tf.disable_eager_execution()
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
