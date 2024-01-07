@@ -170,7 +170,7 @@ class newModel:
         else:
             print("use 'gauss', 'normal', 'truncated_normal' or 'bern' as out_dist")
 
-##########################################################################################################
+
         # ---- the missing process
         with tf.variable_scope('missing'):
 
@@ -193,7 +193,7 @@ class newModel:
             self.log_p_s_given_x = tf.reduce_sum(self.p_s_given_x.log_prob(tf.expand_dims(self.s_pl[2,10:], axis=1)), axis=-1)
         else:
             self.log_p_s_given_x = tf.reduce_sum(self.p_s_given_x.log_prob(tf.expand_dims(self.s_pl, axis=1)), axis=-1)
-############################################################################################################
+
         # --- evaluate the z-samples in q(z|x)
         q_z2 = tfp.distributions.Normal(loc=tf.expand_dims(self.q_mu, axis=1),
                                        scale=tf.sqrt(tf.exp(tf.expand_dims(self.q_log_sig2, axis=1))))
@@ -318,25 +318,6 @@ class newModel:
         return mu, log_sigma, df
 
     def bernoulli_decoder_miss(self, z):
-        
-        # dim = self.d +self.n_latent
-        
-        # if self.missing_process == 'selfmasking':
-
-        #     self.W = tf.get_variable('W', shape=[1, 1, self.d])
-        #     self.b = tf.get_variable('b', shape=[1, 1, self.d])
-
-        #     logits = - self.W * (z - self.b)
-
-        # elif self.missing_process == 'selfmasking_known':
-
-        #     self.W = tf.get_variable('W', shape=[1, 1, self.d])
-        #     self.W = tf.nn.softplus(self.W) 
-        #     #softplus is a smooth approximation of relu. 
-        #     #Like relu, softplus always takes on positive values.
-        #     self.b = tf.get_variable('b', shape=[1, 1, self.d])
-
-        #     logits = - self.W * (z - self.b)
 
         if self.missing_process == 'linear':
 
