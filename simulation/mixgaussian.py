@@ -12,11 +12,6 @@ from .. import utils
 from mmd_measure import mmd
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
-from sklearn.impute import SimpleImputer
-from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import IterativeImputer
-from sklearn.ensemble import RandomForestRegressor
-
 
 # ---- data settings
 name = '/tmp/mixgauss/task01/best'
