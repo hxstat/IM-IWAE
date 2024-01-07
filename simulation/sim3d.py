@@ -28,10 +28,7 @@ batch_size = 16
 L = 10000
 
 # ---- choose the missing model
-# mprocess = 'linear'
-# mprocess = 'selfmasking'
-mprocess = 'linear'#'nonlinear_nsc_shareparam'#'nonlinear_nsc_moreparam''linear_nsc'##'selfmasking_known'
-
+mprocess = 'linear'
 # ---- number of runs
 
 runs = 50
@@ -39,9 +36,6 @@ xmmd_model = []
 jmmd_model = []
 xmmd_model1 = []
 jmmd_model1 = []
-xmmd_gina1 = []
-jmmd_gina1 = []
-
 
 
 RMSE_model = []
@@ -96,8 +90,6 @@ for run in range(runs):
     x_gen = np.mean(x_gen,axis = 1)
     s_gen = np.mean(s_gen,axis = 1)
     xs_gen = np.concatenate((x_gen, s_gen), axis = 1)
-    # print(x_gen.shape)
-    # print(data.shape)
     xmmd = mmd(x_gen, data)
     jmmd = mmd(xs_gen, data_S)
     xmmd_model1.append(xmmd)
