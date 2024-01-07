@@ -5,10 +5,10 @@ import sys
 import random
 sys.path.append(os.getcwd())
 from NIM-IWAE import newModel
-import ..sim_data
+import sim_data
 import ..trainer
 import ..utils
-from ..mmd_measure import mmd
+from mmd_measure import mmd
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
 from sklearn.impute import SimpleImputer
