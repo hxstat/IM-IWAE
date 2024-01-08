@@ -46,7 +46,7 @@ def imputationRMSE(model, Xorg, Xz, X, S, L):
 
 def not_imputationRMSE(model, Xorg, Xz, X, S, L):
     """
-    Imputation error of missing data, using the not-MIWAE
+    Imputation error of missing data, using the model of NIM-IWAE
     """
     N = len(X)#X is useless
 
@@ -86,7 +86,7 @@ def not_imputationRMSE(model, Xorg, Xz, X, S, L):
 
 def not_imputationRMSE_y(model, Xorg, Xz, X, S, L, y):
     """
-    Imputation error of missing data, using the not-MIWAE
+    Imputation error of missing data conditional on label y
     """
     N = len(X)
 
