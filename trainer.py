@@ -1,7 +1,6 @@
 import time
 import sys
 
-
 def train(model, batch_size, max_iter=10000, name=None):
 
     if name is not None:
@@ -27,7 +26,6 @@ def train(model, batch_size, max_iter=10000, name=None):
             else:
                 cnt += 1
                 
-            # print loss
             if i % 1000 == 0:
                 print("{0}/{1} updates, {2:.2f} s, {3:.2f} train_loss, {4:.2f} val_loss".format(i, max_iter, took, loss, val_loss))
                 sys.stdout.flush()
