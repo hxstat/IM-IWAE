@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.stats import uniform
 
-# old
+
 def old_self_censoring(X):
     N, D = X.shape
     Xnan = X.copy()
