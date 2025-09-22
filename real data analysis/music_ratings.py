@@ -4,7 +4,7 @@ import scipy as sp
 import os
 import sys
 sys.path.append(os.getcwd())
-from ..NIM-IWAE import newModel
+from ..IM-IWAE import newModel
 from .. import trainer
 from .. import utils
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
