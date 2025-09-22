@@ -6,7 +6,7 @@ import random
 sys.path.append(os.getcwd())
 import sim_data
 from mmd_measure import mmd
-from ..IM-IWAE import newModel
+from ..IM_IWAE import newModel
 from .. import trainer
 from .. import utils
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
