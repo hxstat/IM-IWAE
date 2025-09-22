@@ -9,7 +9,7 @@ from ..simulation import sim_data
 from ..simulation import sim_data_mixgaussian
 from .. import trainer
 from .. import utils
-from ..mmd_measure import mmd
+from ..simulation.mmd_measure import mmd
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 import json
 
