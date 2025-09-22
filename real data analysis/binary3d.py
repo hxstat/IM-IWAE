@@ -4,7 +4,7 @@ import os
 import sys
 import random
 sys.path.append(os.getcwd())
-from ..NIM-IWAE import newModel
+from ..IM-IWAE import newModel
 from ..simluation import sim_data
 from ..simluation import sim_data_mixgaussian
 from .. import trainer
