@@ -4,7 +4,7 @@ import os
 import sys
 import random
 sys.path.append(os.getcwd())
-from ..NIM-IWAE import newModel
+from ..IM-IWAE import newModel
 from ..simulation import sim_data
 from .. import trainer
 from .. import utils
