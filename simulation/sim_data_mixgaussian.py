@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Mar 21 15:37:35 2023
-
-@author: GameChanger
-"""
 
 import numpy as np
 import tensorflow.compat.v1 as tf
