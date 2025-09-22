@@ -5,8 +5,8 @@ import sys
 import random
 sys.path.append(os.getcwd())
 from ..IM_IWAE import newModel
-from ..simluation import sim_data
-from ..simluation import sim_data_mixgaussian
+from ..simulation import sim_data
+from ..simulation import sim_data_mixgaussian
 from .. import trainer
 from .. import utils
 from ..mmd_measure import mmd
