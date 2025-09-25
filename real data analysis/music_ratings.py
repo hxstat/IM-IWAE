@@ -3,10 +3,11 @@ import pandas as pd
 import scipy as sp
 import os
 import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from IM_IWAE import newModel
+import trainer
+import utils
 sys.path.append(os.getcwd())
-from ..IM_IWAE import newModel
-from .. import trainer
-from .. import utils
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
 
@@ -22,7 +23,7 @@ L = 10
 mprocess = 'linear'
 
 # ---- number of runs
-runs = 5
+runs = 50
 RMSE_model = []
 
 

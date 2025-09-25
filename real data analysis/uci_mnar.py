@@ -3,11 +3,13 @@ import pandas as pd
 import os
 import sys
 import random
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from IM_IWAE import newModel
+import trainer
+import utils
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "simulation"))
+import sim_data
 sys.path.append(os.getcwd())
-from ..IM_IWAE import newModel
-from ..simulation import sim_data
-from .. import trainer
-from .. import utils
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
 
@@ -29,7 +31,7 @@ RMSE_model = []
 for run in range(runs):
     
     # ---- load data
-    url = "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
+    url = "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv"
     data = np.array(pd.read_csv(url, low_memory=False, sep=';'))#,.; for banknote, wine
     # ---- drop the classification attribute
     data = data[:, :-1]

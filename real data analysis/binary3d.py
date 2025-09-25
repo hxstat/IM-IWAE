@@ -3,13 +3,13 @@ import pandas as pd
 import os
 import sys
 import random
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from IM_IWAE import newModel
+import trainer
+import utils
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "simulation"))
+from sim_data import map_binary
 sys.path.append(os.getcwd())
-from ..IM_IWAE import newModel
-from ..simulation import sim_data
-from ..simulation import sim_data_mixgaussian
-from .. import trainer
-from .. import utils
-from ..simulation.mmd_measure import mmd
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 import json
 
@@ -89,7 +89,7 @@ for run in range(runs):
     Xrec = imp_res[1]
     Xrec[Xrec<0.5] = 0
     Xrec[Xrec>=0.5] = 1
-    jd = sim_data.map_binary(Xrec)[0]/Xrec.shape[0]
+    jd = map_binary(Xrec)[0]/Xrec.shape[0]
     #jd_model.append(jd)
     #print(jd_model)
     
@@ -109,7 +109,7 @@ for run in range(runs):
     Xrec = np.mean(x_gen,axis = 1)
     Xrec[Xrec<0.5] = 0
     Xrec[Xrec>=0.5] = 1
-    jd_gen = sim_data.map_binary(Xrec)[0]/Xrec.shape[0]
+    jd_gen = map_binary(Xrec)[0]/Xrec.shape[0]
 
 
     jd_gen_dict = {"(0,0,0)":jd_gen[0], "(0,0,1)":jd_gen[1], "(0,1,0)":jd_gen[2], "(0,1,1)":jd_gen[3], "(1,0,0)":jd_gen[4],"(1,0,1)":jd_gen[5], "(1,1,0)":jd_gen[6], "(1,1,1)":jd_gen[7]}
