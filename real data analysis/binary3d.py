@@ -11,7 +11,6 @@ sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__f
 from sim_data import map_binary
 sys.path.append(os.getcwd())
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
-import json
 
 
 
