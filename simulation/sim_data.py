@@ -174,6 +174,8 @@ def simulate_data(seed = 0,# missing = True,
     #dimX
     return X, R #, Xorg, Xnan, Xm, Rm
 
+
+
 def get_missingdata(X, R):
 
     dimR = R.shape[1]

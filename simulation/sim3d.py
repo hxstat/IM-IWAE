@@ -6,15 +6,10 @@ import random
 sys.path.append(os.getcwd())
 import sim_data
 from mmd_measure import mmd
-from ..IM_IWAE import newModel
-from .. import trainer
-from .. import utils
+from IM_IWAE import newModel
+import trainer
+import utils
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
-
-from sklearn.impute import SimpleImputer
-from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import IterativeImputer
-from sklearn.ensemble import RandomForestRegressor
 
 
 ### encoder add mask?
@@ -46,8 +41,8 @@ for run in range(runs):
     # ---- load data
     dl = 3
 
-    X, R = sim_data.simulate_data(dimZ = dl,  dimX = 3, censor_linearity = "linear",addon = 3, seed = run)#dimH = n_hidden,#same seed 0 # default : linear censoring # the data has been standardized to have sd = 1
-
+    X, R = sim_data.simulate_data(dimZ = dl,  dimX = 3, censor_linearity = "linear",addon = 3, seed = run) #censor_linearity = "nonlinear"
+    # X, R = sim_data.simulate_data_zt(dimZ = dl,  dimX = 3, censor_linearity = "linear", addon = 3, seed = run)
     data, Xnan, Xz, _ = sim_data.get_missingdata(X, R) #data is all observed for R not all 0, Xnan: with nan, Xz: replace nan with 0s
     
     N, D = data.shape
@@ -77,7 +72,7 @@ for run in range(runs):
     # ---------------------- #
     # ---- fit new model---- #
     # ---------------------- #
-    model = newModel(Xtrainnan, Xvalnan, n_latent=dl, n_samples=n_samples, n_hidden=n_hidden, missing_process = 'linear_nsc', name=name)
+    model = newModel(Xtrainnan, Xvalnan, n_latent=dl, n_samples=n_samples, n_hidden=n_hidden, missing_process = 'linear_nsc', name=name) #missing_process = 'nonlinear_nsc_shareparam'
 
     # ---- do the training
     trainer.train(model, batch_size=batch_size, max_iter=max_iter, name=name + 'model')
