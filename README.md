@@ -1,6 +1,7 @@
-# IM-IWAE: Deep Generative Models for MNAR Data
+# IM-IWAE: Identifiable Deep Generative Models for MNAR Data
 
-This repository contains the official implementation of **IM-IWAE** (Importance-Weighted Autoencoders for Missing Not At Random data), a deep generative model designed to handle data with missingness that is not at random (MNAR), under the condition of no self-censoring given latent variables.
+This repository contains the official implementation of **IM-IWAE** (identifiable missing-not-at-random importance-weighted
+autoencoder), a deep generative model designed to handle data with missingness that is not at random (MNAR), under the condition of no self-censoring given latent variables for identifiability.
 
 ## Overview
 
