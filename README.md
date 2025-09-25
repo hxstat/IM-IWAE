@@ -19,10 +19,11 @@ Before you begin, ensure you have the following installed:
 ### Installation
 
 Download the code or clone this repository:
-
-`git clone https://github.com/your-username/IM-IWAE.git`  
-`cd IM-IWAE`
-
+    ```bash
+    git clone https://github.com/your-username/IM-IWAE.git`  
+    cd IM-IWAE`
+    ```
+    
 ## Experiments
 
 This repository contains code to reproduce the synthetic and real-world experiments from the paper.
