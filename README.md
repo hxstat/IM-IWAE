@@ -10,11 +10,11 @@ The core implementation is in `IM-IWAE.py`.
 
 ### Installation
 
-1.  Download the code, or clone this repository by running:
-    ```bash
-    git clone https://github.com/your-username/IM-IWAE.git
-    cd IM-IWAE
-    ```
+Download the code or clone this repository by running:
+
+```bash
+git clone https://github.com/your-username/IM-IWAE.git
+cd IM-IWAE
 
 ### Prerequisites
 
