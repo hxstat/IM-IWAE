@@ -1,6 +1,58 @@
-# IM-IWAE
-'IM-IWAE.py' implements IM-IWAE, the deep generative model for MNAR data under the condition of no self-censoring given latent variables.   
+# IM-IWAE: Deep Generative Models for MNAR Data
 
-To run the synthetic experiments, execute the code in 'sim3d.py' and 'mixgaussian.py' in the folder 'simulation' for the 3-dimensional simulation and mixture of Guassian simulation.
+This repository contains the official implementation of **IM-IWAE** (Importance-Weighted Autoencoders for Missing Not At Random data), a deep generative model designed to handle data with missingness that is not at random (MNAR), under the condition of no self-censoring given latent variables.
 
-To run the real-world experiments, execute the code in 'uci_mnar.py', 'binary3d.py' and 'music_ratings.py' in the folder of 'real data analysis', which correspond to the experiments on UCI data, HIV data and Yahoo! R3 music ratings. Downloading of the corresponding datasets online is needed.
+## Overview
+
+Real-world datasets often contain missing values, and when the reason for missingness depends on the unobserved values themselves (MNAR), standard imputation methods can be biased. IM-IWAE provides a principled approach to learning from such complex, incomplete data.
+
+The core implementation is in `IM-IWAE.py`.
+
+## Quick Start
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+*   **Python 3.8.5** (Recommended for compatibility)
+*   To install the required Python packages, run:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+### Installation
+
+1.  Clone this repository:
+    ```bash
+    git clone https://github.com/your-username/IM-IWAE.git
+    cd IM-IWAE
+    ```
+
+## 🧪 Experiments
+
+This repository contains code to reproduce the synthetic and real-world experiments from the paper.
+
+### Synthetic Data Experiments
+
+These experiments demonstrate the model's performance on controlled, synthetic data.
+
+*   **3-Dimensional Simulation**
+    *   Run the script: `simulation/sim3d.py`
+*   **Mixture of Gaussians Simulation**
+    *   Run the script: `simulation/mixgaussian.py`
+
+### Real-World Data Experiments
+
+These experiments evaluate the model on real-world datasets with simualted MNAR mechanisms for the UCI datasets, and inherent MNAR mechanisms for the other datasets.
+
+*   **UCI Datasets**
+    *   Run the script: `real_data_analysis/uci_mnar.py`
+*   **HIV Data (Binary 3D)**
+    *   Run the script: `real_data_analysis/binary3d.py`
+*   **Yahoo! R3 Music Ratings**
+    *   Run the script: `real_data_analysis/music_ratings.py`
+
+### Important Note on Datasets
+
+**The real-world datasets are not included in this repository.** You will need to download them from their original sources before running the respective scripts. 
+
+**Exception:** The Wine Quality dataset URL is included in `uci_mnar.py`, so this script can be executed directly without manual download.
