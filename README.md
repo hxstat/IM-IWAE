@@ -7,14 +7,6 @@ The core implementation is in `IM-IWAE.py`.
 
 ## Quick Start
 
-### Prerequisites
-
-Before you begin, ensure you have the following installed:
-*   **Python 3.8.5** (Recommended for compatibility)
-*   To install the required Python packages, run:
-    ```bash
-    pip install -r requirements.txt
-    ```
 
 ### Installation
 
@@ -22,6 +14,15 @@ Before you begin, ensure you have the following installed:
     ```bash
     git clone https://github.com/your-username/IM-IWAE.git
     cd IM-IWAE
+    ```
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+*   **Python 3.8.5** (Recommended for compatibility)
+*   To install the required Python packages, run:
+    ```bash
+    pip install -r requirements.txt
     ```
     
 ## Experiments
