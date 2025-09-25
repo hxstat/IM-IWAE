@@ -3,10 +3,6 @@
 This repository contains the implementation of **IM-IWAE** (Identifiable Missing-not-at-random Importance-Weighted
 AutoEncoder), a deep generative model designed to handle data with missingness that is not at random (MNAR), under the condition of no self-censoring given latent variables for identifiability.
 
-## Overview
-
-Real-world datasets often contain missing values, and when the reason for missingness depends on the unobserved values themselves (MNAR), standard imputation methods can be biased. IM-IWAE provides a principled approach to learning from such complex, incomplete data.
-
 The core implementation is in `IM-IWAE.py`.
 
 ## Quick Start
