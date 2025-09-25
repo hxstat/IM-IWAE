@@ -18,7 +18,7 @@ Before you begin, ensure you have the following installed:
 
 ### Installation
 
-*   Download the code or clone this repository:
+Download the code or clone this repository:
     ```bash
     git clone https://github.com/your-username/IM-IWAE.git
     cd IM-IWAE
