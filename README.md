@@ -54,4 +54,4 @@ These experiments evaluate the model on real-world datasets with simualted MNAR 
 
 **The real-world datasets are not included in this repository.** You will need to download them from their original sources before running the respective scripts. 
 
-**Exception:** The Wine Quality dataset URL is included in `uci_mnar.py`, so this script can be executed directly without manual download.
+**Exception:** The Wine Quality dataset URL is included in `uci_mnar.py`, so the script for this dataset can be executed directly without manual download.
