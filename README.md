@@ -27,7 +27,7 @@ Before you begin, ensure you have the following installed:
     cd IM-IWAE
     ```
 
-## 🧪 Experiments
+## Experiments
 
 This repository contains code to reproduce the synthetic and real-world experiments from the paper.
 
