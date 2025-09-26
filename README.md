@@ -41,7 +41,7 @@ These experiments demonstrate the model's performance on synthetic data.
 
 ### Real-World Data Experiments
 
-These experiments evaluate the model on real-world datasets with simualted MNAR mechanisms for the UCI datasets, and inherent MNAR mechanisms for the other datasets.
+These experiments evaluate the model on real-world datasets, with simualted MNAR mechanisms for the UCI datasets and inherent MNAR mechanisms for the other datasets.
 
 *   **UCI Datasets**
     *   Run the script: `real_data_analysis/uci_mnar.py`
