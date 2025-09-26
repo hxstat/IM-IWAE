@@ -34,7 +34,7 @@ This repository contains code to reproduce the synthetic and real-world experime
 
 These experiments demonstrate the model's performance on synthetic data.
 
-*   **3-Dimensional Simulation**
+*   **3-Dimensional Data Simulation**
     *   Run the script: `simulation/sim3d.py`
 *   **Mixture of Gaussians Simulation**
     *   Run the script: `simulation/mixgaussian.py`
