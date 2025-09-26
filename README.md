@@ -32,7 +32,7 @@ This repository contains code to reproduce the synthetic and real-world experime
 
 ### Synthetic Data Experiments
 
-These experiments demonstrate the model's performance on controlled, synthetic data.
+These experiments demonstrate the model's performance on synthetic data.
 
 *   **3-Dimensional Simulation**
     *   Run the script: `simulation/sim3d.py`
