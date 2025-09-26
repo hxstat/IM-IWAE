@@ -38,6 +38,8 @@ These experiments demonstrate the model's performance on synthetic data.
     *   Run the script: `simulation/sim3d.py`
 *   **Mixture of Gaussians Simulation**
     *   Run the script: `simulation/mixgaussian.py`
+*   **Higher Dimensional and Block-wise Missing Data Simulation**
+    *   Run the script: `simulation/sim_block.py`
 
 ### Real-World Data Experiments
 
