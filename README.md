@@ -10,7 +10,7 @@ The core implementation is in `IM-IWAE.py`.
 
 ### Installation
 
-Download the code or clone this repository by running:
+Download the code, or clone this repository by running:
 
 ```bash
 git clone https://github.com/your-username/IM-IWAE.git
