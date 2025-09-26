@@ -1,7 +1,7 @@
 # IM-IWAE: Identifiable Deep Latent Variable Models for MNAR Data
 
 This repository contains the implementation of **IM-IWAE** (**I**dentifiable **M**issing-not-at-random **I**mportance-**W**eighted
-**A**uto**E**ncoder), a deep generative model designed to handle data with missingness that is not at random (MNAR), under the condition of no self-censoring given latent variables for identifiability.
+**A**uto**E**ncoder), a deep latent variable model designed to impute and generate data with missingness that is not at random (MNAR), under the condition of no self-censoring given latent variables for identifiability.
 
 The core implementation is in `IM-IWAE.py`.
 
