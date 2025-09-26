@@ -45,7 +45,7 @@ These experiments evaluate the model on real-world datasets, with simualted MNAR
 
 *   **UCI Datasets**
     *   Run the script: `real_data_analysis/uci_mnar.py`
-*   **HIV Data (Binary 3D)**
+*   **Binary Data for HIV positive mothers in Botswana**
     *   Run the script: `real_data_analysis/binary3d.py`
 *   **Yahoo! R3 Music Ratings**
     *   Run the script: `real_data_analysis/music_ratings.py`
