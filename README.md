@@ -13,7 +13,7 @@ The core implementation is in `IM-IWAE.py`.
 Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/IM-IWAE.git
+git clone https://github.com/hxstat/IM-IWAE.git
 cd IM-IWAE
 ```
 
