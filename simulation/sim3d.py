@@ -40,9 +40,13 @@ for run in range(runs):
     
     # ---- load data
     dl = 3
-
+    
+    # without latent variables for R:
     X, R = sim_data.simulate_data(dimZ = dl,  dimX = 3, censor_linearity = "linear",addon = 3, seed = run) #censor_linearity = "nonlinear"
+    
+    # with latent variables for R:
     # X, R = sim_data.simulate_data_zt(dimZ = dl,  dimX = 3, censor_linearity = "linear", addon = 3, seed = run)
+    
     data, Xnan, Xz, _ = sim_data.get_missingdata(X, R) #data is all observed for R not all 0, Xnan: with nan, Xz: replace nan with 0s
     
     N, D = data.shape
