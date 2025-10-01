@@ -20,7 +20,7 @@ class newModel:
                  permutation_invariance=False,
                  embedding_size=20,
                  code_size=50,
-                 missing_process='linear_nsc',
+                 missing_process='linear_nsc', # no self censoring
                  testing=False,
                  name='/tmp/newModel',
                  complexity = 'high',
@@ -402,7 +402,7 @@ class newModel:
                 else:
                     logits = tf.concat((logits, logit), axis = 2)
                     
-        elif self.missing_process == 'nonlinear_nsc_moreparam':
+        elif self.missing_process == 'nonlinear_nsc_moreparam': # no self censoring
             # logits = tf.zeros_like(z)
             x = z[:,:,:self.d]
             lz = z[:,:, self.d:]
@@ -417,7 +417,7 @@ class newModel:
                     logits = tf.concat((logits, logit), axis = 2)
                 # logits[:,:,j] = logit
                 
-        elif self.missing_process == 'nonlinear_nsc_shareparam':
+        elif self.missing_process == 'nonlinear_nsc_shareparam': # no self censoring
             x = z[:,:,:self.d]
             lz = z[:,:, self.d:]
             # logits = tf.zeros_like(z)
