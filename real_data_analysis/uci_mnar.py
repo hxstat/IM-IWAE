@@ -32,6 +32,7 @@ for run in range(runs):
     
     # ---- load data
     url = "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv"
+    # url = "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
     data = np.array(pd.read_csv(url, low_memory=False, sep=';'))#,.; for banknote, wine
     # ---- drop the classification attribute
     data = data[:, :-1]
